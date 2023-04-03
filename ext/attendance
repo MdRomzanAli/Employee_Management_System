@@ -1,6 +1,5 @@
 <?php include "inc/header.php"; ?>
 <?php include "inc/menu.php"; ?>
-<?php include "css.php"; ?>
       
       <!-- partial -->
       <div class="main-panel">
@@ -39,46 +38,48 @@
               case 'view':
                     ?>
 
-        <div class="col-lg-12 grid-margin stretch-card">
+                    <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
                 <div class="float-right">
-                  <h4>Take Attendance</h4>
-                                <!-- <a href="attendance.php?action=view"  data-toggle="modal" data-target="#exampleModal" ><i class="ml-5 mdi mdi-plus-circle-outline mdi-48px"  ></i></a> -->
-                                <a href="attendance.php?action=view"  data-toggle="modal" data-target="#exampleModal" ><i class="ml-5 mdi mdi-plus-circle-outline mdi-48px"  ></i> </a>
-                  <div class="modal   mt-5 " id="exampleModal"  >
+                                <a href="http://localhost/ems/attendance.php?action=view"  data-toggle="modal" data-target="#exampleModal" ><i class=" mdi mdi-plus-circle-outline mdi-48px"  ></i></a>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                              <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                  <div class="modal-header">
+                                                    <h5 class="modal-title mx-auto" id="exampleModalLabel" >Attendance</h5>
+                                                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                      <span aria-hidden="true">&times;</span>
+                                                    </button> -->
+                                                  
+                                                   </div>
+                                                  <div class="modal-body">
+                                                  <label for="id" class="col-sm-3 col-form-label" >ID:</label>
+                                                  <input class=" border rounded" style="height: 40px;" type="number"><br><br>
+
+                                                  <label for="name" class="col-sm-3 col-form-label" >Name:</label>
+                                                  <input class=" border rounded" style="height: 40px;" type="text"><br><br>
+
+                                                  <label for="shift" class="col-sm-3 col-form-label" >Shift:</label>     
+                                                    <select class=" border rounded" style="height: 40px;">
+                                                            <option>Day</option>
+                                                            <option>Night</option>
+                                                            </select><br><br>
+
+                                                <label for="entry" class="col-sm-3 col-form-label" >Entry Time:</label>
+                                                  <input class=" border rounded" style="height: 40px;" type="datetime-local"><br><br>        
+                                                
+                                                </div>
+
+                                                  <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Attendance</button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
                             
-                            <div class="section   gray-bg col-lg-8 rounded mx-auto" id="about">
-                              <div class="text-center"><h3 class="dark-color ">Attendance</h3></div>
-                                      <div class="container ">
-                
-                                              <label for="name"><b>Mahedi:</b></label>  
-                                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                Date:
-                                                 <input type="date">   
-                                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                              <input type="checkbox"  name="" id=""  >
-                                              Present
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <input type="checkbox"  name="" id=""  >
-                                              Absent
-                       
-
-                        
-                                       </div>
-            
-                              <div  class="text-center mt-5"><button type="button" class="btn btn-primary ">Add</button> </div>
                             </div>
-                  
-
-                  </div>
-                     <!-- <div class="modal-dialog text-center" role="document">
-                      <button type="button" class="btn btn-secondary " data-dismiss="modal">Close</button>
-                     </div> -->
-             
-                 </div>
-              
-
 
                             
                   <h4 class="card-title">Attendance List</h4>

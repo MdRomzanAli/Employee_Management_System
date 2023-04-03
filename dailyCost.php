@@ -42,15 +42,16 @@
               <div class="card">
                 <div class="card-body">
                 <div class="float-right">
-                                <a href="http://localhost/ems/attendance.php?action=view" id="h" data-toggle="modal" data-target="#exampleModal" ><i class=" mdi mdi-plus-circle-outline mdi-48px"  ></i></a>
+                                <a href="dailyCost.php?action=add"  ><i class=" mdi mdi-plus-circle-outline mdi-48px"  ></i></a>
+                                 <!-- <a href="dailyCost.php?action=add" id="h" data-toggle="modal" data-target="#exampleModal" ><i class=" mdi mdi-plus-circle-outline mdi-48px"  ></i></a>
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                               <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                   <div class="modal-header">
                                                     <h5 class="modal-title mx-auto" id="exampleModalLabel" >Cost List</h5>
-                                                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                       <span aria-hidden="true">&times;</span>
-                                                    </button> -->
+                                                    </button> 
                                                   
                                                    </div>
                                                   <div class="modal-body">
@@ -69,6 +70,9 @@
                                                   <label for="invoice" class="col-sm-3 col-form-label" >Invoice:</label>
                                                   <input class=" border rounded" style="height: 30px;" type="file"><br><br>
 
+                                                  <label for="paidBy" class="col-sm-3 col-form-label" >Paid_By:</label>
+                                                  <input class=" border rounded" style="height: 30px;" type="text"><br><br>
+
                                                   <label for="name" class="col-sm-3 col-form-label" >Comment:</label>
                                                   <input class=" border rounded" style="height: 40px;" type="text"><br><br>
 
@@ -82,7 +86,7 @@
                                                   </div>
                                                 </div>
                                               </div>
-                                            </div>
+                                            </div> -->
                             
                             </div>
 
@@ -133,7 +137,7 @@
                   </div>
                   
               </div>
-            </div>
+            </div> 
 
            
 
@@ -141,31 +145,88 @@
                 break;
               case 'add':
                     ?>
-<div class="card mx-auto"style="height: 600px;width:600px;">
-<h4 class="card-title mx-auto">Add_Cost_list</h4>
-<form class="form-sample ">
-                                                  <label for="id" class="col-sm-3 col-form-label" >C_ID:</label>
-                                                  <input class=" border rounded" style="height: 40px;" type="number"><br><br>
+<div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Add Cost List</h4>
+                  <form class="form-sample">
+                    <p class="card-description">
+                      Daily cost list
+                    </p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Item Name</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="name">
+                          </div>
+                        </div>
+                      </div>
+                      
+                      
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Date</label>
+                          <div class="col-sm-9">
+                            <input type="date" class="form-control" name="date">
+                          </div>
+                        </div>
+                      </div>
+                      </div>
 
-                                                  <label for="entry" class="col-sm-3 col-form-label" >Entry Time:</label>
-                                                  <input class=" border rounded" style="height: 40px;" type="datetime-local"><br><br>   
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Ammount</label>
+                          <div class="col-sm-9">
+                            <input type="number" class="form-control" name="number">
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Paid_By</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="paidBy">
+                          </div>
+                        </div>
+                      </div>
+                      </div>
 
-                                                  <label for="name" class="col-sm-3 col-form-label" >Item Name:</label>
-                                                  <input class=" border rounded" style="height: 40px;" type="text"><br><br>
-
-                                                  <label for="amount" class="col-sm-3 col-form-label" >Amount:</label>
-                                                  <input class=" border rounded" style="height: 40px;" type="number"><br><br>
-
-                                                  <label for="invoice" class="col-sm-3 col-form-label" >Invoice:</label>
-                                                  <input class=" border rounded" style="height: 30px;" type="file"><br><br>
-
-                                                  <label for="name" class="col-sm-3 col-form-label" >Comment:</label>
-                                                  <input class=" border rounded" style="height: 40px;" type="text"><br><br>
-                                                  <button type="button" class="btn btn-primary  justify-content-center ">Add</button>
-                                                  
+                    
+                      <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Invoice</label>
+                          <div class="col-sm-9">
+                            <input type="file" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">comment</label>
+                          <div class="col-sm-9">
+                          <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+                    
+                       </textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                      
+                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
-                  </div>
-                                                  <!-- <label for="id" class="col-sm-3 col-form-label" >C_ID:</label>
+                </div>
+              </div>
+            </div>                                                  <!-- <label for="id" class="col-sm-3 col-form-label" >C_ID:</label>
                                                   <input class=" border rounded" style="height: 40px;" type="number"><br><br>
 
                                                   <label for="entry" class="col-sm-3 col-form-label" >Entry Time:</label>
