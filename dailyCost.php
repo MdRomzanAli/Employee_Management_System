@@ -115,6 +115,17 @@
                         </tr>
                       </thead>
                       <tbody>
+                      <?php
+                      $sql="SELECT * FROM daily_convence";
+                        $result=$conn->query($sql);
+
+                        if(mysqli_num_rows($result)>0)
+                          while($row=mysqli_fetch_assoc($result))
+                            echo "</tr><td>" . $row["C_ID"] . "</td><td>" . $row["date"] . "</td> <td>" . $row["item"] ."</td> <td>" . $row["amount"] ."</td> <td>" . $row["paidby"] . "</td> <td>" . $row["invoice"] ."</td> <td>" . $row["comment"] ."</td></tr>"
+                         
+                        
+                        
+                         ?>
                         <tr>
                           
                           <td>1234</td>
@@ -145,11 +156,11 @@
                 break;
               case 'add':
                     ?>
-<div class="col-12 grid-margin">
+             <div class="col-12 grid-margin">
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Add Cost List</h4>
-                  <form class="form-sample">
+                  <form class="form-sample" action="core\insert.php" method="post" autocomplate="off" >
                     <p class="card-description">
                       Daily cost list
                     </p>
@@ -158,7 +169,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Item Name</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" name="name">
+                            <input type="text" class="form-control" name="itmname">
                           </div>
                         </div>
                       </div>
@@ -170,7 +181,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Date</label>
                           <div class="col-sm-9">
-                            <input type="date" class="form-control" name="date">
+                            <input type="date" class="form-control" name="pdate">
                           </div>
                         </div>
                       </div>
@@ -181,7 +192,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Ammount</label>
                           <div class="col-sm-9">
-                            <input type="number" class="form-control" name="number">
+                            <input type="number" class="form-control" name="ammount">
                           </div>
                         </div>
                       </div>
@@ -192,7 +203,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Paid_By</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" name="paidBy">
+                            <input type="text" class="form-control" name="paidby">
                           </div>
                         </div>
                       </div>
@@ -204,7 +215,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Invoice</label>
                           <div class="col-sm-9">
-                            <input type="file" class="form-control">
+                            <input type="file" class="form-control" name="invoice">
                           </div>
                         </div>
                       </div>
@@ -214,7 +225,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">comment</label>
                           <div class="col-sm-9">
-                          <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+                          <textarea name="comment" id="comments" style="font-family:sans-serif;font-size:1.2em;">
                     
                        </textarea>
                           </div>
@@ -222,7 +233,7 @@
                       </div>
                     </div>
                       
-                     <button type="submit" class="btn btn-primary">Submit</button>
+                     <button type="submit" class="btn btn-primary" name="daily">Submit</button>
                   </form>
                 </div>
               </div>
